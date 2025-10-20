@@ -9,21 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            Text("Hello, Home!") // change it to some view later on
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-            
-            Text("Hello, DntKnow!")
-                .tabItem {
-                    Label("Dont Know", systemImage: "questionmark")
-                }
-            
-            Text("Hello, Settings!")
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
+        NavigationStack {
+            TabView {
+                ValueView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                Text("Hello, DntKnow!")
+                    .tabItem {
+                        Label("Dont Know", systemImage: "questionmark")
+                    }
+                
+                Text("Hello, Settings!")
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
+            .tint(.brightTeal)
         }
     }
 }
