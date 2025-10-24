@@ -65,6 +65,19 @@ struct ValueView: View {
                 .background(.containerGrey)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 
+                Button {
+                    
+                } label: {
+                    Text("Get values")
+                        .frame(height: 50)
+                        .frame(maxWidth: .infinity)
+                        .background(.brightTeal)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .foregroundStyle(.black)
+                        .font(.system(size: 25))
+                }
+                .padding(.vertical)
+                
                 Spacer()
             }
             .padding()
