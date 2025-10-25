@@ -66,7 +66,9 @@ struct ValueView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 
                 Button {
-                    
+                    Task {
+                        await ValueViewModel.main()
+                    }
                 } label: {
                     Text("Get values")
                         .frame(height: 50)
